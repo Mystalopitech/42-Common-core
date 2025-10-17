@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:47:32 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/17 16:13:06 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/17 18:28:14 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,7 +18,9 @@ int	main(void)
 {
 //char arr[50] = "ALED IL DEVIENT FOU!";
 	//char arr_dest[50] = "BONJOUR LEQUIPAGEEEEUH";
-char *arr = "bonjour";
+	char *arr;
+
+	arr = strdup("bonjour");
 	//printf("%d\n", ft_isascii(','));
 	//printf("%d\n", ft_isalnum('%'));
 	//printf("%d\n", ft_isprint(127));
@@ -42,7 +44,8 @@ char *arr = "bonjour";
 //	memmove(arr_dest, arr_dest, 4); //dst2 + 3, dst2, size
 //	printf("%s\n", arr);
 //	printf("%s\n", arr_dest);
-	printf("%s\n", ft_strrchr(arr + 2, '\0'));
-	printf("%s\n", strrchr(arr + 2, '\0'));
+	printf("%s\n", (char *)ft_memchr(arr, 0, 0));
+	printf("%s\n", (char *)memchr(arr, 0, 0));
+	free(arr);
 	return (0);
 }
