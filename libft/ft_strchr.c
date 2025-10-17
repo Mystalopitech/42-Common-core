@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:49:22 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/17 14:47:09 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/17 16:19:42 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	char			*ptr;
 	unsigned char	c1;
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	ptr = (char *)s;

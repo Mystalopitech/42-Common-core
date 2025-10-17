@@ -6,11 +6,11 @@
 /*   By: eautin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:56:02 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/14 15:42:10 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/17 16:24:19 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int		i;
 
