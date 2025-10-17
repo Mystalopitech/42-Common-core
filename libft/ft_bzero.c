@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 14:21:37 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/17 10:43:43 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:58:35 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	p = (unsigned char *)s;
 	i = 0;
-	while (i < n && p[i])
+	while (i < n)
 	{
 		p[i] = '\0';
 		i++;
