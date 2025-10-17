@@ -6,7 +6,7 @@
 #    By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 17:01:41 by eautin            #+#    #+#              #
-#    Updated: 2025/10/17 11:16:49 by eautin           ###   ########.fr        #
+#    Updated: 2025/10/17 15:17:04 by eautin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,10 +22,13 @@ MY_SOURCES = ft_isalpha.c \
 			ft_tolower.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
+			ft_strchr.c \
 			ft_atoi.c \
+			ft_memset.c \
 			ft_bzero.c \
 			ft_memcpy.c \
-			ft_memset.c \
+			ft_memmove.c\
+			ft_strrchr.c \
 
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
