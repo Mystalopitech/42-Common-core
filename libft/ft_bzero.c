@@ -6,14 +6,22 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 14:21:37 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/16 14:49:33 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:43:43 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	bzero(void *s, size_t n)
+
+void	ft_bzero(void *s, size_t n)
 {
-	
+	unsigned char	*p;
+	size_t			i;
+
+	p = (unsigned char *)s;
+	i = 0;
+	while (i < n && p[i])
+	{
+		p[i] = '\0';
+		i++;
+	}
 }
-*/
