@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:33:42 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/24 12:02:56 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/24 16:00:45 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		ft_atoi(const char *str);
 char	*ft_strnstr(char *s1, char *to_find, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strdup(const char *src);
 
 /// ======
 ///	Memory
@@ -46,5 +47,6 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
