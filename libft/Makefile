@@ -6,7 +6,7 @@
 #    By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 17:01:41 by eautin            #+#    #+#              #
-#    Updated: 2025/10/24 15:57:11 by eautin           ###   ########.fr        #
+#    Updated: 2025/10/24 16:36:48 by eautin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ MY_SOURCES = ft_isalpha.c \
 			ft_strlcat.c \
 			ft_strdup.c \
 			ft_calloc.c \
+			ft_substr.c \
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 
