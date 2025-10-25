@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:47:32 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/24 17:51:52 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/25 16:39:58 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,15 +23,20 @@ int	main(void)
 	// char *arr2;
 	// char *arr_dest;
 	// char *arr_dest2;
-	char	*str;
+	// char	*str;
+	// char	*str2;
 
 	// arr = ft_strdup("lorem ipsum dolor sit amet");
 	// arr2 = ft_strdup("lorem ipsum dolor sit amet");
 	// arr_dest = ft_strdup("");
 	// arr_dest2 = ft_strdup("");
-	str = ft_strdup("hola");
+	// str = ft_strdup("lorem ipsum dolor sit amet");
+	// str2 = ft_strdup("dolor sit amet");
+	// arr = ft_strtrim(str, str2);
+	// arr = ft_strjoin(str, str2);
+	// printf("%s\n", arr);
 	// str = ft_strdup("ALED IL DEVIENT FOU!");
-	printf("%s\n", ft_substr(str, 0, 321837328321313321));
+	// printf("%s\n", ft_substr(str, 6, 15));
 	//printf("%d\n", ft_isascii(','));
 	//printf("%d\n", ft_isalnum('%'));
 	//printf("%d\n", ft_isprint(127));
@@ -62,6 +67,7 @@ int	main(void)
 	// printf("%s\n", arr);
 	// printf("%s\n", arr_dest);
 	// printf("%s\n", arr_dest2);
-	free(str);
+	printf("%s\n", ft_itoa(12));
+	// free(str);
 	return (0);
 }
