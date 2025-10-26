@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:18:41 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/24 17:50:12 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/26 12:07:05 by lucy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			i;
 	char			*substr;
 	size_t			s_len;
 
-	i = 0;
 	s_len = ft_strlen(s);
 	if (len >= 2147483647)
 		len = s_len;
