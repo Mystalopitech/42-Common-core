@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:59:57 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/26 17:49:28 by lucy             ###   ########.fr       */
+/*   Updated: 2025/10/30 16:49:02 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ unsigned int	ft_nlen(int n)
 	i = 0;
 	if (n < 0)
 		n *= -1;
-	while (n / 10 > 0 )
+	while (n / 10 > 0)
 	{
 		n /= 10;
 		i++;
@@ -82,18 +82,18 @@ char	*ft_itoa(int n)
 	if (n != -2147483648)
 	{
 		nlen = ft_nlen(n);
-		rsl = malloc(sizeof (char) * nlen + 1);
-		if (!rsl)
-			return (rsl);
+		// rsl = malloc(sizeof (char) * nlen + 1);
+		// if (!rsl)
+			// return (rsl);
 	}
-	if (n == -2147483648)
-	{
-		rsl = malloc(sizeof (char) * 12);
-		if (!rsl)
-			return (rsl);
-		rsl = "-2147483647\0";
-		return (rsl);
-	}
+	// if (n == -2147483648)
+	// {
+		// rsl = malloc(sizeof (char) * 12);
+		// if (!rsl)
+			// return (rsl);
+		// rsl = "-2147483647\0";
+		// return (rsl);
+	// }
 	if (n < 0)
 		rsl = ft_is_neg(n, nlen);
 	if (n >= 0)
