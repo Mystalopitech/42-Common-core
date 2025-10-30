@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:47:32 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/26 17:50:17 by lucy             ###   ########.fr       */
+/*   Updated: 2025/10/28 13:14:19 by lucy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -66,7 +66,7 @@ int	main(void)
 	// printf("%s\n", arr);
 	// printf("%s\n", arr_dest);
 	// printf("%s\n", arr_dest2);
-	arr = ft_itoa(100);
+	arr = ft_itoa(-2147483647 - 1);
 	printf("%s\n", arr);
 	// free(str);
 	return (0);
