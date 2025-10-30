@@ -6,11 +6,11 @@
 /*   By: lucy <lucy@42angouleme.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:57:52 by lucy              #+#    #+#             */
-/*   Updated: 2025/10/28 13:25:16 by lucy             ###   ########.fr       */
+/*   Updated: 2025/10/30 09:55:21 by lucy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h";
 
 char **ft_split(char const *s, char c)
 {
@@ -26,7 +26,7 @@ char **ft_split(char const *s, char c)
 	i = 0;
 	while (str[i])
 	{
-		str[i] = (char *)s;
+		
 	}
 	return (str);
 }
