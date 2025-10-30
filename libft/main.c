@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:47:32 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/30 16:51:37 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/30 17:45:12 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,7 @@ int	main(void)
 	char	*strings;
 	// char	delimiter;
 	// char	**strings_array;
-	char	*arr;
+	// char	*arr;
 	size_t	i;
 	
 	i = 0;
@@ -72,8 +72,8 @@ int	main(void)
 	// printf("%s\n", arr);
 	// printf("%s\n", arr_dest);
 	// printf("%s\n", arr_dest2);
-	arr = ft_itoa(-10);
-	printf("%s\n", arr);
+	// arr = ft_itoa(-10);
+	// printf("%s\n", arr);
 	// delimiter = '*';
 	// strings = ft_strdup("**d*d****ddd**d*d*d*********d********we**D*S**DS**DA**A*D");
 	// strings_array = ft_split(strings, delimiter);
@@ -91,10 +91,10 @@ int	main(void)
 	// free(strings_array);
 	// free(strings);
 	// strings = ft_strdup("lorem \n ipsum \t dolor \n sit \t amet");
-	strings = ft_strdup("");
+	strings = ft_strdup("adcBonjouradc");
 	strings =  ft_strtrim(strings, "adc");
 	printf("%s\n", strings);
-	free(arr);
+	// free(arr);
 	free(strings);
 	return (0);
 }
