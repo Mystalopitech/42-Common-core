@@ -6,59 +6,59 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 13:37:43 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/25 14:36:10 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/30 16:04:11 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strstr(char *big, char *little)
+static int	to_trim(char c, const char *set)
 {
-	size_t	i;
-	size_t	j;
+	size_t		i;
 
 	i = 0;
-	j = 0;
-	while ((little[j] && big[i]))
+	while (set[i])
 	{
-		if (little[j] == big[i])
-		{
-			j++;
-			i++;
-			if (little[j] == '\0')
-				return (i - j);
-		}
-		else
-		{
-			i = i - j + 1;
-			j = 0;
-		}
+		if (c == set[i])
+			return (1);
+		i++;
 	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static char	*string_trim(char *string, size_t start, size_t end)
 {
-	char		*str;
 	size_t		i;
-	size_t		dindex;
-	size_t		slen;
-	size_t		dlen;
+	char		*trimmed_string;
 
-	slen = ft_strlen(s1);
-	dlen = ft_strlen(set);
-	str = malloc(sizeof (char) * slen - dlen + 1);
-	if (!str)
-		return (str);
 	i = 0;
-	dindex = ft_strstr((char *)s1, (char *)set);
-	while (s1[i])
+	trimmed_string = malloc(sizeof (char) * (end - start) + 1);
+	if (!trimmed_string)
+		return (trimmed_string);
+	while (i < end)
 	{
-		if (i >= dindex && i <= dlen + dindex)
-			i++;
-		str[i] = s1[i];
+		trimmed_string[i] = string[i + start];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (trimmed_string);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char		*trimmed_string;
+	size_t		source_len;
+	size_t		start;
+	size_t		end;
+
+	if (!s1)
+		return (ft_strdup(("")));
+	source_len = ft_strlen(s1);
+	start = 0;
+	end = source_len;
+	while (to_trim(s1[start], set))
+		start++;
+	while (to_trim(s1[end - 1], set))
+		end--;
+	trimmed_string = string_trim((char *)s1, start, end);
+	return (trimmed_string);
 }

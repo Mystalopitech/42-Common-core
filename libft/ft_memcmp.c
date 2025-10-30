@@ -6,13 +6,13 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 13:43:47 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/23 14:39:02 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/27 14:03:21 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
 	unsigned char	*string1;
@@ -31,4 +31,3 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-

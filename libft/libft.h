@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:33:42 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/25 16:14:27 by eautin           ###   ########.fr       */
+/*   Updated: 2025/10/30 10:33:29 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 /// ======
 ///	Memory
@@ -55,6 +56,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
