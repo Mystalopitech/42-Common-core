@@ -6,7 +6,7 @@
 /*   By: lucy <lucy@42angouleme.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:57:52 by lucy              #+#    #+#             */
-/*   Updated: 2025/10/30 12:01:03 by eautin           ###   ########.fr       */
+/*   Updated: 2025/11/01 18:30:52 by lucy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,8 @@ static char	**ft_split_strings(char **strings_arr, char *source, char delimiter)
 char	**ft_split(char const *s, char c)
 {
 	char		**strings_array;
-	size_t		source_len;
 	size_t		strings_number;
 
-	source_len = ft_strlen(s);
 	strings_number = ft_count_strings((char *)s, c);
 	strings_array = malloc(sizeof (char *) * strings_number + 1);
 	strings_array = ft_split_strings(strings_array, (char *)s, c);

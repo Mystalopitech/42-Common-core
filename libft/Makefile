@@ -6,7 +6,7 @@
 #    By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 17:01:41 by eautin            #+#    #+#              #
-#    Updated: 2025/10/30 10:33:42 by eautin           ###   ########.fr        #
+#    Updated: 2025/11/01 18:53:46 by lucy             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ MY_SOURCES = ft_isalpha.c \
 			ft_putnbr_fd.c \
 			ft_itoa.c \
 			ft_split.c \
+			ft_strmapi.c \
+			ft_striteri.c \
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 
