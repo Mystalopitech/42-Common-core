@@ -6,35 +6,48 @@
 /*   By: lucy <lucy@42angouleme.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:57:52 by lucy              #+#    #+#             */
-/*   Updated: 2025/11/01 18:30:52 by lucy             ###   ########.fr       */
+/*   Updated: 2025/11/04 13:41:23 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	ft_free_strings(char **strings, size_t n)
+{
+	size_t		i;
+
+	i = 0;
+	while (i < n)
+	{
+		free(strings[i]);
+		i++;
+	}
+	free(strings);
+}
+
 static size_t	ft_count_strings(char *source, char delimiter)
 {
 	size_t		i;
-	size_t		strings_number;
+	size_t		strings_count;
 
 	i = 0;
-	strings_number = 0;
+	strings_count = 0;
 	while (source[i])
 	{
-		if (source[i + 1] == '\0')
-		{
-			strings_number++;
+		while (source[i] && source[i] == delimiter)
 			i++;
-		}
-		else if (source[i] != delimiter)
+		if (source[i] && source[i] != delimiter)
+			strings_count++;
+		while (source[i] && source[i] != delimiter)
 			i++;
-		else if (source[i] == delimiter)
-		{
-			strings_number++;
-			i++;
-		}
 	}
-	return (strings_number);
+	return (strings_count);
+}
+
+static char	**ft_free_tab(char **strings_arr, size_t n)
+{
+	ft_free_strings(strings_arr, n);
+	return (NULL);
 }
 
 static char	**ft_split_strings(char **strings_arr, char *source, char delimiter)
@@ -42,27 +55,25 @@ static char	**ft_split_strings(char **strings_arr, char *source, char delimiter)
 	size_t		i;
 	size_t		j;
 	size_t		k;
-	size_t		string_size;
 
 	i = 0;
-	j = 0;
 	k = 0;
-	string_size = 0;
 	while (source[i])
 	{
-		if (source[i] != delimiter && source[i + 1])
+		while (source[i] && source[i] == delimiter)
 			i++;
-		if ((source[i] == delimiter) || (!source[i + 1]))
+		j = i;
+		while (source[i] && source[i] != delimiter)
+			i++;
+		if (i > j)
 		{
-			string_size = i - j;
-			if (!source[i + 1])
-				string_size++;
-			strings_arr[k] = ft_substr(source, j, string_size);
+			strings_arr[k] = ft_substr(source, j, i - j);
+			if (!strings_arr[k])
+				return (ft_free_tab(strings_arr, k));
 			k++;
-			i++;
-			j = i;
 		}
 	}
+	strings_arr[k] = NULL;
 	return (strings_arr);
 }
 
@@ -72,7 +83,9 @@ char	**ft_split(char const *s, char c)
 	size_t		strings_number;
 
 	strings_number = ft_count_strings((char *)s, c);
-	strings_array = malloc(sizeof (char *) * strings_number + 1);
+	strings_array = malloc(sizeof (char *) * (strings_number + 1));
+	if (!strings_array)
+		return (strings_array);
 	strings_array = ft_split_strings(strings_array, (char *)s, c);
 	return (strings_array);
 }
