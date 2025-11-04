@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:47:32 by eautin            #+#    #+#             */
-/*   Updated: 2025/11/01 18:33:22 by lucy             ###   ########.fr       */
+/*   Updated: 2025/11/04 12:29:43 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,8 +19,8 @@ int	main(void)
 {
 //char arr[50] = "ALED IL DEVIENT FOU!";
 	//char arr_dest[50] = "BONJOUR LEQUIPAGEEEEUH";
-	char	*strings;
-	char	*strings1;
+	// char	*strings;
+	// char	*strings1;
 	// char	delimiter;
 	// char	**strings_array;
 	// char	*arr;
@@ -92,10 +92,11 @@ int	main(void)
 	// free(strings_array);
 	// free(strings);
 	// strings = ft_strdup("lorem \n ipsum \t dolor \n sit \t amet");
-	strings1 = ft_strdup("Bon");
-	strings =  ft_strjoin(strings1, "jour");
-	printf("%s\n", strings);
-	// free(arr);
-	free(strings);
+	// strings1 = ft_strdup("Bon");
+	// strings =  ft_strjoin(strings1, "jour");
+	// printf("%s\n", strings);
+	printf("%s\n", ft_itoa(-10034));
+	// // free(arr);
+	// free(strings);
 	return (0);
 }
