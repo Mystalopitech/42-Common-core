@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:48:08 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/24 16:00:47 by eautin           ###   ########.fr       */
+/*   Updated: 2025/11/04 14:34:16 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char	*ft_strdup(const char *src)
 {
 	size_t			i;
-	char			*dst;
+	char			*dest;
 
 	i = 0;
-	dst = malloc(sizeof (char) * ft_strlen(src) + 1);
-	if (!dst)
-		return (dst);
+	dest = malloc(sizeof (char) * ft_strlen(src) + 1);
+	if (!dest)
+		return (dest);
 	while (src[i])
 	{
-		dst[i] = src[i];
+		dest[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	dest[i] = '\0';
+	return (dest);
 }

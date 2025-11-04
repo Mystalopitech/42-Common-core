@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:11:57 by eautin            #+#    #+#             */
-/*   Updated: 2025/10/17 16:32:31 by eautin           ###   ########.fr       */
+/*   Updated: 2025/11/04 14:37:23 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	c1;
-	char			*occ;
-	char			*ptr;
+	unsigned char	c_ptr;
+	char			*occurence;
+	char			*source_ptr;
 	size_t			i;
 
-	ptr = (char *)s;
-	c1 = (unsigned char)c;
-	occ = NULL;
+	source_ptr = (char *)s;
+	c_ptr = (unsigned char)c;
+	occurence = NULL;
 	i = 0;
-	while (ptr[i])
+	while (source_ptr[i])
 	{
-		if (ptr[i] == c1)
-			occ = ptr + i;
+		if (source_ptr[i] == c_ptr)
+			occurence = source_ptr + i;
 		i++;
 	}
-	if (c1 == '\0')
-		return (ptr + i);
-	return (occ);
+	if (c_ptr == '\0')
+		return (source_ptr + i);
+	return (occurence);
 }
