@@ -6,7 +6,7 @@
 /*   By: lucy <lucy@42angouleme.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:57:52 by lucy              #+#    #+#             */
-/*   Updated: 2025/11/04 13:41:23 by eautin           ###   ########.fr       */
+/*   Updated: 2025/11/10 13:46:55 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,6 @@ static size_t	ft_count_strings(char *source, char delimiter)
 	return (strings_count);
 }
 
-static char	**ft_free_tab(char **strings_arr, size_t n)
-{
-	ft_free_strings(strings_arr, n);
-	return (NULL);
-}
-
 static char	**ft_split_strings(char **strings_arr, char *source, char delimiter)
 {
 	size_t		i;
@@ -67,10 +61,12 @@ static char	**ft_split_strings(char **strings_arr, char *source, char delimiter)
 			i++;
 		if (i > j)
 		{
-			strings_arr[k] = ft_substr(source, j, i - j);
+			strings_arr[k++] = ft_substr(source, j, i - j);
 			if (!strings_arr[k])
-				return (ft_free_tab(strings_arr, k));
-			k++;
+			{
+				ft_free_strings(strings_arr, k);
+				return (NULL);
+			}
 		}
 	}
 	strings_arr[k] = NULL;
