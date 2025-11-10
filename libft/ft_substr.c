@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:18:41 by eautin            #+#    #+#             */
-/*   Updated: 2025/11/04 13:22:34 by eautin           ###   ########.fr       */
+/*   Updated: 2025/11/10 15:35:30 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*substr;
 	size_t			source_len;
 
+	if (!s)
+		return (NULL);
 	if (s[0] == '\0' || len == 0)
 		return (ft_strdup(""));
 	source_len = ft_strlen(s);
