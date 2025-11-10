@@ -6,7 +6,7 @@
 #    By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 17:01:41 by eautin            #+#    #+#              #
-#    Updated: 2025/11/01 18:53:46 by lucy             ###   ########.fr        #
+#    Updated: 2025/11/10 13:44:55 by eautin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ $(NAME): $(MY_OBJECTS)
 	cc $(CFLAGS) -o $@ -c $<
 
 clean:
-	rm -f *.o 
+	rm -f $(MY_OBJECTS) 
 
 fclean: clean
 	rm -f $(NAME)
