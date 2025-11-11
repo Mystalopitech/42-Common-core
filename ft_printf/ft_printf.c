@@ -6,7 +6,7 @@
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 15:01:45 by eautin            #+#    #+#             */
-/*   Updated: 2025/11/04 16:28:16 by eautin           ###   ########.fr       */
+/*   Updated: 2025/11/11 16:59:51 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ static int	handle_conversion(char c, va_list args)
 		return (ft_unsigned_putnbr(va_arg(args, unsigned int)));
 	if (c == '%')
 		return (ft_putchar('%'));
+	if (c == 'x')
+		return (ft_putnbr_hexa(va_arg(args, int)));
 	return (0);
 }
 

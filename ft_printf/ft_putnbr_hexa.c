@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eautin <eautin@42angouleme.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 16:24:41 by eautin            #+#    #+#             */
-/*   Updated: 2025/11/11 17:00:37 by eautin           ###   ########.fr       */
+/*   Created: 2025/11/11 16:57:18 by eautin            #+#    #+#             */
+/*   Updated: 2025/11/11 17:06:41 by eautin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "ft_printf.h"
-#include <stdlib.h>
 
-int	main(void)
+int	ft_putnbr_hexa(int n)
 {
-	// char	*arr;
+	int		decimal_number;
+	int		temp;
 
-	// arr = strdup("test");
-	ft_printf("%x\n", 2000000);
-	printf("%x\n", 2000000);
+	decimal_number = n;
+	while (decimal_number != 0)
+	{
+		temp = decimal_number % 16;
+		if (temp < 10)
+			temp = temp + 48;
+		else
+			temp = temp + 55;
+
+	}
+
 }
